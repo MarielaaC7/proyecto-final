@@ -1,0 +1,381 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff9e3;
+    height: auto;
+    overflow-y: auto;
+    font-family: "Montserrat", sans-serif;
+  
+}
+
+header {
+    background-color: #fff9e3;
+    margin: 5px;
+    border-bottom: 3px solid #579a60;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: start;
+}
+
+.logo h1 {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #579a60;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    gap:2rem;
+    padding: 0;
+    margin: 0;
+}
+nav li {
+  list-style: none;
+}
+
+nav ul li a {
+    color: #3a3a3a;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-right: 6%;
+}
+
+main {
+    margin-top: 200px; 
+    background-size: cover;
+}
+
+
+
+.grilla-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.item {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(80%);
+    border-radius: 3px;
+}
+
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.998);
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+
+h2 {
+    margin-top: 200px;
+    text-align: center;
+    color: #3a6b36;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3.8rem;
+    font-style: italic;
+}
+
+
+
+.sticky-container {
+    height: 200px;
+    margin-top: 20px;
+    overflow: auto;
+    border: 1px solid black;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: crimson;
+    padding: 5px;
+}
+
+/* FOOTER */
+
+.footer-container {
+    background-color: #fff9e3;
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.logofinal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff9e3;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.address {
+    text-align: center;
+    flex: 1;
+    color: #3a3a3a;
+}
+
+.iconosredes ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-left: 0;
+    margin: 0;
+}
+
+.iconosredes li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+
+
+.icono-wsp-fijo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icono-wsp-fijo:hover {
+    transform: scale(1.1);
+}
+
+
+
+#contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.tarjeta-producto {
+    border: 1px solid #3a6b36;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #3a3a3a;
+    
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+#contenedor-carrito {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-height: 70vh; /* altura máxima */
+  overflow-y: auto;  /* scroll vertical si se pasa */
+  background-color: #fffbe6;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.producto-carrito {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fffef3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.producto-carrito:hover {
+  transform: scale(1.02);
+}
+
+.producto-carrito img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.producto-carrito h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.producto-carrito p {
+  margin: 0.3rem 0;
+  font-weight: bold;
+}
+
+.btn-eliminar-carrito {
+  margin-top: auto;
+  background-color: #3a3a3a;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-eliminar-carrito:hover {
+  background-color: #ce0812;
+}
+
+#acciones-carrito {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* separación entre botones */
+  margin-top: 2rem;
+}
+
+#acciones-carrito button {
+  background-color: #579a60; /* violeta */
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#acciones-carrito button:hover {
+  background-color: #1a5422; /* violeta oscuro al pasar el mouse */
+}
+
+.form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #3a3a3a;
+}
+
+.form label {
+  margin-top: 1rem;
+  display: block;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1.1rem;
+  border: 2px solid #579a60; 
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+.form button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #579a60; 
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #4a913c;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .grilla-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+}
